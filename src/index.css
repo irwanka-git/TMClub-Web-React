@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap');
+@import "~react-image-gallery/styles/css/image-gallery.css";
+body{
+  background-color: whitesmoke;
+  font-family: 'Poppins', 'Roboto', Geneva, Verdana, sans-serif;
+}
+div.about-html ul > li {
+  list-style-type: circle;
+  list-style-position: outside; 
+  margin-left: 1.5rem;
+}
+div.about-html  ul {
+  margin-bottom: 2rem;
+}
+div.about-html  p{
+  margin-top: 1rem;
+}
+div.about-html  table{
+  width: 100%;
+  margin-top: 1rem;
+}
+div.about-html table > tbody > tr > td {
+  padding: 0.3rem;
+}
+
+div.about-html tr {
+  margin: 0.3rem;
+}
+div.about-html tr >td {
+  border-bottom: 1px solid gray;
+}
