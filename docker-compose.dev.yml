@@ -10,11 +10,4 @@ services:
     volumes:
       - ./src:/app/src
     ports:
-      - 3000:3000
-  nginx: 
-    image: nginx:latest
-    container_name: production_nginx
-    volumes:
-      - ./nginx/default.conf:/etc/nginx/conf.d  
-    ports:
       - 80:80
