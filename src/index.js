@@ -12,6 +12,7 @@ import NoPage from './page/NoPage';
 import './index.css';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
+document.title = 'TMClub.';
 root.render(
   <BrowserRouter>
     <Routes>
