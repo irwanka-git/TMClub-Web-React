@@ -5,6 +5,7 @@ services:
     container_name: tmc-webapp-prod
     image: tmc-webapp-prod
     build:
-      context: Dockerfile.prod
+      context: .
+      dockerfile: Dockerfile.prod
     ports:
       - 3030:80
