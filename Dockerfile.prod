@@ -1,0 +1,30 @@
+FROM node:14-alpine AS build
+
+# define env
+ENV NODE_ENV prod
+
+# Add a work directory
+WORKDIR /app
+
+# Cache and Install dependencies
+COPY package.json .
+COPY yarn.lock .
+RUN yarn install --frozen-lockfile
+COPY . .
+
+# build react app
+RUN yarn build
+
+# Start production setup
+FROM nginx:1.23.3-alpine AS prod
+
+# define env
+ENV TZ Asia/Jakarta
+
+# copying from stage and copying nginx configuration
+COPY --from=build /app/build /usr/share/nginx/html
+COPY nginx/default.conf /etc/nginx/default.conf
+
+# expose and starting
+EXPOSE 80
+CMD ["nginx", "-g", "daemon off;"]

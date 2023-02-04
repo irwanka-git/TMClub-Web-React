@@ -1,0 +1,10 @@
+version: "3.8"
+
+services:
+  app:
+    container_name: tmc-webapp-prod
+    image: tmc-webapp-prod
+    build:
+      context: Dockerfile.prod
+    ports:
+      - 3030:80
