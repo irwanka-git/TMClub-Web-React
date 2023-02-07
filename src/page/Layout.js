@@ -8,7 +8,7 @@ const Layout = () => {
     return (
         <div>
             <Helmet>
-                <title>{TITLE}</title>
+                <title>{TITLE}</title> 
             </Helmet>
             <Navbar />
             <div className='text-slate-900 md:px-28  px-6 mt-12' >
