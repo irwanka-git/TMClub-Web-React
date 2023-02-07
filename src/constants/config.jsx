@@ -21,4 +21,4 @@ export const MENUS = [
 	},
 ]
 
-export const BASE_URL = 'http://137.184.58.131:8000';
+export const BASE_URL = 'https://api.toyotamanufacturersclub.id';
